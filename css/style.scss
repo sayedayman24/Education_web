@@ -1,24 +1,15 @@
-* {
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    transition: all .2s linear;
-}
-
+                    // Start Variables 
 $green: #0eb582;
 $light-green: #f0fdfa;
 $light-color: #777;
 $light-white:  #eee;
 $black: #444;
 $white: #fff;
-$border: 1rem solid $green;
+$border: .1rem solid $green;
 $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+                    // End Variables 
 
-
+                    //  Start Mixin 
 @mixin grid($val) {
     display: gird;
     grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
@@ -35,6 +26,19 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     font-size: $graphSize;
     line-height: 2;
     color: $light-color;
+}
+                    //  End Mixin 
+
+                    /* Start Global Rules */
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
 }
 
 html {
@@ -54,6 +58,25 @@ html {
     }
 }
 
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    border: $border;
+    background-color: $light-green;
+    color: $green;
+    cursor: pointer;
+    text-transform: capitalize;
+    &:hover {
+        background-color: $green;
+        color: $white;
+    }
+}
+                    /* End Global Rules */
+
+
+                    /* Start Header */
 .header {
     position: sticky;
     top: 0;
@@ -64,12 +87,10 @@ html {
     display: flex;
     align-items: center;
     z-index: 1000;
-
     .logo {
         margin-right: auto;
         @include titleText(2.5rem);
         font-weight: bolder;
-
         svg {
             color: $green;
         }
@@ -77,25 +98,24 @@ html {
 
     .navbar {
         position: relative;
-
         #close-navbar {
             position: absolute;
             top: 1.5rem;
-            right: 2rem;
+            right: 3rem;
             font-size: 4rem;
             color: $black;
+            cursor: pointer;
             display: none;
 
             &:hover svg {
                 transform: rotate(90deg);
-                transition: 0.1s;
+                color: $green;
             }
         }
 
         a {
             margin-right: 2rem;
             @include titleText(2rem);
-        
             &:hover {
                 color: $green;
             }
@@ -103,7 +123,6 @@ html {
     }
 
     .icons {
-
         svg {
             cursor: pointer;
             font-size: 2.5rem;
@@ -114,23 +133,105 @@ html {
                 color: $green;
             }
         }
-
         #menu-btn {
             display: none;
         }
     }
 
 }
+                    /* End Header */
+
+                    /* Start Account Form */
+.account-form {
+    position: fixed;
+    top: 0;
+    right: -105%;
+    width: 35rem;
+    background-color: $white;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    justify-content: center;
+    height: 100%;
+    // box-shadow: 0 0 0 100vw rgba(0, 0, 0, .8);
+    z-index: 1200;
+    padding: 2rem;
+    text-align: center;
+    &.active {
+        right: 0;
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, .8);
+    }
+    #close-form {
+        position: absolute;
+        top: 1.5rem;
+        right: 3rem;
+        font-size: 4rem;
+        color: $black;
+        // display: none;
+        cursor: pointer;
+        &:hover svg {
+            transform: rotate(90deg);
+            color: $green;
+        }
+    }
+    .buttons .btn {
+        margin: 0 .5rem;
+        &.active {
+            background-color: $green;
+            color: $white;
+        }
+    }
+    form {
+        border: $border;
+        padding: 2rem;
+        text-align: center;
+        display: none;
+        &.active {
+            display: block;
+        }
+        h3 {
+            @include titleText(2.5rem);
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        .box {
+            width: 100%;
+            padding: 1.2rem 1.4rem;
+            border: $border;
+            font-size: 1.6rem;
+            margin: .7rem 0;
+        }
+        .flex {
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            label {
+                font-size: 1.5rem;
+                color: $light-color;
+                cursor: pointer;
+            }
+            a {
+                font-size: 1.5rem;
+                color: $light-color;
+                margin-left: auto;
+                &:hover {
+                    text-decoration: underline;
+                    color: $green;
+                }
+            }
+        }
+        .btn {
+            width: 100%;
+        }
+    }
+}
+                    /* End Account Form */
 
 
 
 
-
-
-
-
-
-// Media Queries
+                    /* Start Media Queries */
 @media (max-width: 1200px) {
     .header {
         padding: 2rem 5%;
@@ -162,6 +263,7 @@ html {
             display: flex;
             flex-flow: column;
             justify-content: center;
+            z-index: 1200;
 
             #close-navbar {
                 display: inline-block;
@@ -190,4 +292,5 @@ html {
         font-size: 50%;
     }
 }
+                    /* End Media Queries */
 

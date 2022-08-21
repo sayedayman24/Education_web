@@ -1,3 +1,4 @@
+/* Start Global Rules */
 * {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -25,6 +26,24 @@ html::-webkit-scrollbar-thumb {
   background: #0eb582;
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  border: 0.1rem solid #0eb582;
+  background-color: #f0fdfa;
+  color: #0eb582;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.btn:hover {
+  background-color: #0eb582;
+  color: #fff;
+}
+
+/* End Global Rules */
+/* Start Header */
 .header {
   position: sticky;
   top: 0;
@@ -57,16 +76,16 @@ html::-webkit-scrollbar-thumb {
 .header .navbar #close-navbar {
   position: absolute;
   top: 1.5rem;
-  right: 2rem;
+  right: 3rem;
   font-size: 4rem;
   color: #444;
+  cursor: pointer;
   display: none;
 }
 .header .navbar #close-navbar:hover svg {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  color: #0eb582;
 }
 .header .navbar a {
   margin-right: 2rem;
@@ -90,6 +109,108 @@ html::-webkit-scrollbar-thumb {
   display: none;
 }
 
+/* End Header */
+/* Start Account Form */
+.account-form {
+  position: fixed;
+  top: 0;
+  right: -105%;
+  width: 35rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  z-index: 1200;
+  padding: 2rem;
+  text-align: center;
+}
+.account-form.active {
+  right: 0;
+  -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+}
+.account-form #close-form {
+  position: absolute;
+  top: 1.5rem;
+  right: 3rem;
+  font-size: 4rem;
+  color: #444;
+  cursor: pointer;
+}
+.account-form #close-form:hover svg {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  color: #0eb582;
+}
+.account-form .buttons .btn {
+  margin: 0 0.5rem;
+}
+.account-form .buttons .btn.active {
+  background-color: #0eb582;
+  color: #fff;
+}
+.account-form form {
+  border: 0.1rem solid #0eb582;
+  padding: 2rem;
+  text-align: center;
+  display: none;
+}
+.account-form form.active {
+  display: block;
+}
+.account-form form h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #444;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.account-form form .box {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border: 0.1rem solid #0eb582;
+  font-size: 1.6rem;
+  margin: 0.7rem 0;
+}
+.account-form form .flex {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+.account-form form .flex label {
+  font-size: 1.5rem;
+  color: #777;
+  cursor: pointer;
+}
+.account-form form .flex a {
+  font-size: 1.5rem;
+  color: #777;
+  margin-left: auto;
+}
+.account-form form .flex a:hover {
+  text-decoration: underline;
+  color: #0eb582;
+}
+.account-form form .btn {
+  width: 100%;
+}
+
+/* End Account Form */
+/* Start Media Queries */
 @media (max-width: 1200px) {
   .header {
     padding: 2rem 5%;
@@ -125,6 +246,7 @@ html::-webkit-scrollbar-thumb {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    z-index: 1200;
   }
   .header .navbar #close-navbar {
     display: inline-block;
@@ -149,3 +271,4 @@ html::-webkit-scrollbar-thumb {
     font-size: 50%;
   }
 }
+/* End Media Queries */
