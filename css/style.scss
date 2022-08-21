@@ -1,0 +1,193 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+$green: #0eb582;
+$light-green: #f0fdfa;
+$light-color: #777;
+$light-white:  #eee;
+$black: #444;
+$white: #fff;
+$border: 1rem solid $green;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+
+@mixin grid($val) {
+    display: gird;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+@mixin titleText($titleSize) {
+    font-size: $titleSize;
+    text-transform: capitalize;
+    color: $black;
+}
+
+@mixin graphText($graphSize) {
+    font-size: $graphSize;
+    line-height: 2;
+    color: $light-color;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $green;
+    }
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: $box-shadow;
+    padding: 2rem 10%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+
+    .logo {
+        margin-right: auto;
+        @include titleText(2.5rem);
+        font-weight: bolder;
+
+        svg {
+            color: $green;
+        }
+    }
+
+    .navbar {
+        position: relative;
+
+        #close-navbar {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            font-size: 4rem;
+            color: $black;
+            display: none;
+
+            &:hover svg {
+                transform: rotate(90deg);
+                transition: 0.1s;
+            }
+        }
+
+        a {
+            margin-right: 2rem;
+            @include titleText(2rem);
+        
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+
+    .icons {
+
+        svg {
+            cursor: pointer;
+            font-size: 2.5rem;
+            color: $black;
+            margin-left: 2rem;
+    
+            &:hover {
+                color: $green;
+            }
+        }
+
+        #menu-btn {
+            display: none;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+// Media Queries
+@media (max-width: 1200px) {
+    .header {
+        padding: 2rem 5%;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        .icons * {
+            display: inline-block !important;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: -105%;
+            width: 30rem;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+
+            #close-navbar {
+                display: inline-block;
+            }
+
+            &.active {
+                box-shadow: 0 0 0 100vw rgba(0, 0, 0, .8);
+                right: 0;
+            }
+
+            a {
+                display: block;
+                margin: 2rem 0;
+                text-align: center;
+                font-size: 3rem;
+                color: $green;
+                font-weight: bold;
+                border-bottom: 1px solid rgb(192 192 192 / 70%);
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
