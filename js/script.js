@@ -42,3 +42,13 @@ loginBtn.onclick = () => {
     loginForm.classList.add('active');
     registerForm.classList.remove('active');
 }
+
+// Swiper for Slider
+var swiper = new Swiper(".home-slider", {
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    loop: true,
+    grabCursor: true,
+});
