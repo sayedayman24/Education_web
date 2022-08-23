@@ -52,6 +52,21 @@ section {
   padding: 5rem 10%;
 }
 
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  color: #444;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 /* End Global Rules */
 /* Start Header */
 .header {
@@ -257,6 +272,102 @@ section {
 }
 
 /* End Home */
+/* Start Subject */
+.subject .box-container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+}
+.subject .box {
+  padding: 3rem 2rem;
+  text-align: center;
+  border: 0.1rem solid #0eb582;
+  background: #f0fdfa;
+  cursor: pointer;
+}
+.subject .box:hover {
+  background-color: #0eb582;
+}
+.subject .box:hover h3 {
+  color: #fff;
+}
+.subject .box:hover p {
+  color: #eee;
+}
+.subject .box img {
+  height: 10rem;
+  margin-bottom: 0.7rem;
+}
+.subject .box h3 {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: #444;
+  padding: 0.5rem 0;
+}
+.subject .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+
+/* End Subject */
+/* Start Home Courses Slider */
+.home-courses .slide {
+  text-align: center;
+  position: relative;
+  width: 30rem;
+  background-color: #f0fdfa;
+  overflow: hidden;
+}
+.home-courses .slide:hover .content {
+  bottom: 0;
+}
+.home-courses .slide .image {
+  padding: 2rem;
+}
+.home-courses .slide .image img {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.home-courses .slide .image h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.home-courses .content {
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  left: 0;
+  background-color: #0eb582;
+  padding: 2rem 3rem;
+}
+.home-courses .content h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+  color: #fff;
+}
+.home-courses .content p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  color: #eee;
+}
+.home-courses .content .btn:hover {
+  background-color: #444;
+}
+.home-courses .swiper-pagination {
+  top: 3px;
+  bottom: 100%;
+}
+.home-courses .swiper-pagination-bullet-active {
+  background-color: #0eb582;
+}
+
+/* End Home Courses Slider */
 /* Start Footer */
 .footer {
   background-color: #f0fdfa;
@@ -413,6 +524,10 @@ section {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .heading {
+    font-size: 3rem;
   }
 
   .footer {

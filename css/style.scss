@@ -83,6 +83,16 @@ html {
 section {
     padding: 5rem 10%;
 }
+
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    @include titleText(3.5rem);
+}
+
+img {
+    user-select: none;
+}
                     /* End Global Rules */
 
 
@@ -268,6 +278,94 @@ section {
 
                     /* End Home */
 
+                    /* Start Subject */
+.subject {
+    .box-container {
+        @include grid(16rem);
+    }
+    .box {
+        padding: 3rem 2rem;
+        text-align: center;
+        border: $border;
+        background: $light-green;
+        cursor: pointer;
+        &:hover {
+            background-color: $green;
+            h3 {
+                color: $white;
+            }
+            p {
+                color: $light-white;
+            }
+        }
+        img {
+            height: 10rem;
+            margin-bottom: .7rem;
+        }
+        h3 {
+            @include titleText(1.7rem);
+            padding: .5rem 0;
+        }
+        p {
+            @include graphText(1.5rem);
+        }
+    }
+}
+                    /* End Subject */
+
+                    /* Start Home Courses Slider */
+.home-courses {
+    .slide {
+        text-align: center;
+        position: relative;
+        width: 30rem;
+        background-color: $light-green;
+        overflow: hidden;
+        &:hover .content {
+            bottom: 0;
+        }
+        .image {
+            padding: 2rem;
+            img {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+            h3 {
+                @include titleText(2rem);
+            }
+        }
+    }
+    .content {
+        position: absolute;
+        bottom: -100%;
+        right: 0;
+        left: 0;
+        background-color: $green;
+        padding: 2rem 3rem;
+        h3 {
+            @include titleText(2rem);
+            color: $white;
+        }
+        p {
+            padding: 1rem 0;
+            @include graphText(1.5rem);
+            color: $light-white;
+        }
+        .btn:hover {
+            background-color: $black;
+        }
+    }
+    .swiper-pagination {
+        top: 3px;
+        bottom: 100%;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $green;
+    }
+        
+}
+                    /* End Home Courses Slider */
+
                     /* Start Footer */
 .footer {
     background-color: $light-green;
@@ -409,6 +507,9 @@ section {
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+    .heading {
+        font-size: 3rem;
     }
     .footer {
         text-align: center;
