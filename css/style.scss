@@ -84,6 +84,25 @@ section {
     padding: 5rem 10%;
 }
 
+.heading-link {
+    text-align: center;
+    background: url(../images/heading-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    h3 {
+        @include titleText(4rem);
+    }
+    p {
+        @include graphText(2rem);
+        a {
+            color: $green;
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
 .heading {
     text-align: center;
     margin-bottom: 3rem;
@@ -181,6 +200,7 @@ img {
     &.active {
         right: 0;
         box-shadow: 0 0 0 100vw rgba(0, 0, 0, .8);
+        transition: all 0.1s;
     }
     #close-form {
         position: absolute;
@@ -248,7 +268,8 @@ img {
     }
 }
                     /* End Account Form */
-
+                    
+                    /* --------Page Home Start-------- */
                     /* Start Home */
 .home {
     padding: 0;
@@ -365,6 +386,60 @@ img {
         
 }
                     /* End Home Courses Slider */
+                    /* --------Page Home End-------- */
+
+                    /* --------Page About Start--------*/
+                    /* Start About Section */
+.about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    .image {
+        flex: 1 1 40rem;
+        img {
+            width: 100%
+        }
+    }
+    .content {
+        flex: 1 1 40rem;
+        .about-title {
+            @include titleText(3rem);
+        }
+        p {
+            @include graphText(1.5rem);
+            padding: 1rem 0;
+        }
+        .icon-container {
+            margin-top: 1rem;
+            @include grid(16rem);
+            // display: flex;
+            // flex-wrap: wrap;
+            // gap: 1.5rem;
+            .icons {
+                // flex: 1 1 12rem;
+                text-align: center;
+                border: $border;
+                background-color: $light-green;
+                padding: 3rem 2rem;
+                img {
+                    height: 5rem;
+                    margin-bottom: .5rem;
+                }
+                h3 {
+                    padding: .5rem 0;
+                    @include titleText(3rem);
+                }
+                span {
+                    @include graphText(1.5rem);
+                }
+            }
+        }
+    }
+
+}
+                    /* End About Section */
+                    /* --------Page About End-------- */
 
                     /* Start Footer */
 .footer {
@@ -485,6 +560,7 @@ img {
             &.active {
                 box-shadow: 0 0 0 100vw rgba(0, 0, 0, .8);
                 right: 0;
+                transition: all 0.1s;
             }
 
             a {
@@ -516,6 +592,9 @@ img {
     }
     .footer .box-container .box .share {
         justify-content: center;
+    }
+    .about .content .about-title {
+        font-size: 4rem;
     }
 }
                     /* End Media Queries */

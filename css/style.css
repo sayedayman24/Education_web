@@ -52,6 +52,29 @@ section {
   padding: 5rem 10%;
 }
 
+.heading-link {
+  text-align: center;
+  background: url(../images/heading-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.heading-link h3 {
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.heading-link p {
+  font-size: 2rem;
+  line-height: 2;
+  color: #777;
+}
+.heading-link p a {
+  color: #0eb582;
+}
+.heading-link p a:hover {
+  font-weight: bold;
+}
+
 .heading {
   text-align: center;
   margin-bottom: 3rem;
@@ -163,6 +186,8 @@ img {
   right: 0;
   -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 .account-form #close-form {
   position: absolute;
@@ -236,6 +261,7 @@ img {
 }
 
 /* End Account Form */
+/* --------Page Home Start-------- */
 /* Start Home */
 .home {
   padding: 0;
@@ -368,6 +394,75 @@ img {
 }
 
 /* End Home Courses Slider */
+/* --------Page Home End-------- */
+/* --------Page About Start--------*/
+/* Start About Section */
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+}
+.about .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+.about .image img {
+  width: 100%;
+}
+.about .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+.about .content .about-title {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.about .content p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  padding: 1rem 0;
+}
+.about .content .icon-container {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+}
+.about .content .icon-container .icons {
+  text-align: center;
+  border: 0.1rem solid #0eb582;
+  background-color: #f0fdfa;
+  padding: 3rem 2rem;
+}
+.about .content .icon-container .icons img {
+  height: 5rem;
+  margin-bottom: 0.5rem;
+}
+.about .content .icon-container .icons h3 {
+  padding: 0.5rem 0;
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.about .content .icon-container .icons span {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+
+/* End About Section */
+/* --------Page About End-------- */
 /* Start Footer */
 .footer {
   background-color: #f0fdfa;
@@ -506,6 +601,8 @@ img {
     -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
             box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
     right: 0;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
   }
   .header .navbar a {
     display: block;
@@ -538,6 +635,10 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .about .content .about-title {
+    font-size: 4rem;
   }
 }
 /* End Media Queries */
