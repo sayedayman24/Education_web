@@ -100,7 +100,7 @@ img {
   background: #fff;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  padding: 2rem 10%;
+  padding: 1.5rem 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -787,6 +787,81 @@ img {
 }
 
 /* End Contact Section */
+/* Start Frequently Section */
+.freq .accordion-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.freq .accordion-container .accordion {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  border: 0.1rem solid #0eb582;
+}
+.freq .accordion-container .accordion.active .accordion-heading {
+  background-color: #0eb582;
+}
+.freq .accordion-container .accordion.active .accordion-heading h3 {
+  color: #fff;
+}
+.freq .accordion-container .accordion.active .accordion-heading span {
+  color: #fff;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.freq .accordion-container .accordion.active .accordion-content {
+  display: block;
+}
+.freq .accordion-container .accordion .accordion-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1.5rem;
+}
+.freq .accordion-container .accordion .accordion-heading h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.freq .accordion-container .accordion .accordion-heading span {
+  font-size: 2rem;
+  color: #0eb582;
+}
+.freq .accordion-container .accordion .accordion-content {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  border-top: 0.1rem solid #0eb582;
+  display: none;
+}
+
+/* End Frequently Section */
+/* Start Logo Container */
+.logo-container {
+  text-align: center;
+}
+.logo-container img {
+  height: 10rem;
+  pointer-events: none;
+}
+
+/* End Logo Container */
 /* --------Page Contact End-------- */
 /* Start Footer */
 .footer {
@@ -876,7 +951,7 @@ img {
 /* Start Media Queries */
 @media (max-width: 1200px) {
   .header {
-    padding: 2rem 5%;
+    padding: 1rem 5%;
   }
 
   section {
@@ -889,7 +964,7 @@ img {
   }
 
   .header {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   section {

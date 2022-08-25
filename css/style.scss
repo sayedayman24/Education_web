@@ -123,7 +123,7 @@ img {
     right: 0;
     background: #fff;
     box-shadow: $box-shadow;
-    padding: 2rem 10%;
+    padding: 1.5rem 10%;
     display: flex;
     align-items: center;
     z-index: 1000;
@@ -716,6 +716,67 @@ img {
     }
 }
                     /* End Contact Section */
+
+                    /* Start Frequently Section */
+.freq {
+    .accordion-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: flex-start;
+        .accordion {
+            flex: 1 1 40rem;
+            border: $border;
+            &.active {
+                .accordion-heading {
+                    background-color: $green;
+                    h3 {
+                        color: $white;
+                    }
+                    span {
+                        color: $white;
+                        transform: rotate(180deg);
+                    }
+                }
+                .accordion-content {
+                    display: block;
+                }
+            }
+            .accordion-heading {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+                cursor: pointer;
+                padding: 1.5rem;
+                h3 {
+                    @include titleText(2rem);
+                }
+                span {
+                    font-size: 2rem;
+                    color: $green;
+                }
+            }
+            .accordion-content {
+                padding: 1.5rem;
+                @include graphText(1.5rem);
+                border-top: $border;
+                display: none;
+            }
+        }
+    }
+}
+                    /* End Frequently Section */
+
+                    /* Start Logo Container */
+.logo-container {
+    text-align: center;
+    img {
+        height: 10rem;
+        pointer-events: none;
+    }
+}
+                    /* End Logo Container */
                     /* --------Page Contact End-------- */
 
 
@@ -794,7 +855,7 @@ img {
                     /* Start Media Queries */
 @media (max-width: 1200px) {
     .header {
-        padding: 2rem 5%;
+        padding: 1rem 5%;
     }
     section {
         padding: 3rem 5%;
@@ -806,7 +867,7 @@ img {
         font-size: 55%;
     }
     .header {
-        padding: 2rem;
+        padding: 1.5rem;
     }
     section {
         padding: 3rem 2rem;
