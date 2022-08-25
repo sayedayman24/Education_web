@@ -642,6 +642,82 @@ img {
                     /* End Courses Section */
                     /* --------Page Courses End-------- */
 
+                    /* --------Page Contact Start-------- */
+                    /* Start Contact Section */
+.contact {
+    .icons-container {
+        @include grid(25rem);
+        margin-bottom: 4rem;
+        .icons {
+            text-align: center;
+            padding: 3rem 2rem;
+            border: $border;
+            background-color: $light-green;
+            span {
+                height: 6rem;
+                width: 6rem;
+                line-height: 6rem;
+                display: inline-block;
+                margin: 0 auto;
+                border-radius: 50%; 
+                margin-bottom: 0.5rem;
+                color: #fff;
+                background-color: #0eb582; 
+                font-size: 2rem;
+            }
+            h3 {
+                @include titleText(2rem);
+                padding: .5rem 0;
+            }
+            p {
+                @include graphText(1.5rem);
+            }
+        }
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        .image {
+            flex: 1 1 40rem;
+            img {
+                width: 100%
+            }
+        }
+        form {
+            flex: 1 1 40rem;
+            border: $border;
+            padding: 2rem;
+            h3 {
+                @include titleText(2.5rem);
+                padding-bottom: 1rem;
+            }
+            .box {
+                width: 100%;
+                padding: 1.2rem 1.4rem;
+                border: $border;
+                font-size: 1.6rem;
+                margin: .7rem 0;
+                &:focus {
+                    background-color: $green;
+                    color: $white;
+                    &::placeholder {
+                        color: $light-white;
+                    }
+                }
+            }
+            textarea {
+                height: 15rem;
+                resize: none;
+            }
+        }
+    }
+}
+                    /* End Contact Section */
+                    /* --------Page Contact End-------- */
+
 
                     /* Start Footer */
 .footer {
