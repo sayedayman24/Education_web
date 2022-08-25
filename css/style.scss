@@ -339,7 +339,6 @@ img {
     .slide {
         text-align: center;
         position: relative;
-        width: 30rem;
         background-color: $light-green;
         overflow: hidden;
         &:hover .content {
@@ -439,7 +438,127 @@ img {
 
 }
                     /* End About Section */
+                    /* Start Teachers */
+.teachers {
+    .slide {
+        text-align: center;
+        &:hover {
+            .image {
+                img {
+                    background-color: $green;
+                }
+                .share {
+                    bottom: 0;
+                }
+            }
+        }
+        .image {
+            position: relative;
+            overflow: hidden;
+            img {
+                background-color: $light-green;
+                width: 100%;
+            }
+            .share {
+                position: absolute;
+                bottom: -10rem;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, .8);
+                padding: 2rem;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                a {
+                    font-size: 3rem;
+                    margin: 0 1rem;
+                    color: $white;
+                    transition: color .1s !important;
+                    padding: .2rem;
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            padding-top: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            h3 {
+                @include titleText(2rem);
+            }
+            span {
+                @include graphText(1.5rem);
+            }
+        }
+    }
+    .swiper-pagination {
+        top: 1px;
+        bottom: 100%;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #4bff00;
+    }
+}
+                    /* End Teachers */
+
+                    /* Start Reviews */
+.reviews {
+    .slide {
+        text-align: center;
+        p {
+            @include graphText(1.5rem);
+            position: relative;
+            background-color: $light-green;
+            border: $border;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -1.2rem;
+                left: 50%;
+                transform: translateX(-50%) rotate(45deg);
+                background-color: $light-green;
+                border-bottom: $border;
+                border-right: $border;
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+        img {
+            height: 7rem;
+            width: 7rem;
+            border-radius: 50%;
+        }
+        h3 {
+            @include titleText(2.2rem);
+            padding: .5rem 0;
+        }
+        .stars {
+            font-size: 1.2rem;
+            color: $green;
+        }
+    }
+    .swiper-pagination {
+        top: 1rem;
+        bottom: 100%;
+        
+    }
+    .swiper-pagination-bullet {
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $green;
+    }
+}
+                    /* End Reviews */
+
                     /* --------Page About End-------- */
+
 
                     /* Start Footer */
 .footer {

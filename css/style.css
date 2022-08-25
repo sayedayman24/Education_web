@@ -342,7 +342,6 @@ img {
 .home-courses .slide {
   text-align: center;
   position: relative;
-  width: 30rem;
   background-color: #f0fdfa;
   overflow: hidden;
 }
@@ -462,6 +461,131 @@ img {
 }
 
 /* End About Section */
+/* Start Teachers */
+.teachers .slide {
+  text-align: center;
+}
+.teachers .slide:hover .image img {
+  background-color: #0eb582;
+}
+.teachers .slide:hover .image .share {
+  bottom: 0;
+}
+.teachers .slide .image {
+  position: relative;
+  overflow: hidden;
+}
+.teachers .slide .image img {
+  background-color: #f0fdfa;
+  width: 100%;
+}
+.teachers .slide .image .share {
+  position: absolute;
+  bottom: -10rem;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.teachers .slide .image .share a {
+  font-size: 3rem;
+  margin: 0 1rem;
+  color: #fff;
+  -webkit-transition: color 0.1s !important;
+  transition: color 0.1s !important;
+  padding: 0.2rem;
+}
+.teachers .slide .image .share a:hover {
+  color: #0eb582;
+}
+.teachers .slide .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.teachers .slide .content h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.teachers .slide .content span {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+.teachers .swiper-pagination {
+  top: 1px;
+  bottom: 100%;
+}
+.teachers .swiper-pagination-bullet-active {
+  background-color: #4bff00;
+}
+
+/* End Teachers */
+/* Start Reviews */
+.reviews .slide {
+  text-align: center;
+}
+.reviews .slide p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  position: relative;
+  background-color: #f0fdfa;
+  border: 0.1rem solid #0eb582;
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+.reviews .slide p::before {
+  content: "";
+  position: absolute;
+  bottom: -1.2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  background-color: #f0fdfa;
+  border-bottom: 0.1rem solid #0eb582;
+  border-right: 0.1rem solid #0eb582;
+  height: 2rem;
+  width: 2rem;
+}
+.reviews .slide img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+}
+.reviews .slide h3 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #444;
+  padding: 0.5rem 0;
+}
+.reviews .slide .stars {
+  font-size: 1.2rem;
+  color: #0eb582;
+}
+.reviews .swiper-pagination {
+  top: 1rem;
+  bottom: 100%;
+}
+.reviews .swiper-pagination-bullet {
+  width: 0.6rem;
+  height: 0.6rem;
+}
+.reviews .swiper-pagination-bullet-active {
+  background-color: #0eb582;
+}
+
+/* End Reviews */
 /* --------Page About End-------- */
 /* Start Footer */
 .footer {
