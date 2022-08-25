@@ -559,6 +559,89 @@ img {
 
                     /* --------Page About End-------- */
 
+                    /* --------Page Courses Start-------- */
+                    /* Start Courses Section */
+.courses {
+    .box-container {
+        @include grid(30rem);
+        .box {
+            &:hover .image img {
+                transform: scale(1.03);
+            }
+            &:hover {
+                transform: scale(1.04);
+            }
+            &:hover .image h3 {
+                color: $green;
+            }
+            &.hide {
+                display: none;
+            }
+            .image {
+                height: 25rem;
+                overflow: hidden;
+                position: relative;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                h3 {
+                    @include titleText(1.5rem);
+                    position: absolute;
+                    top: 1rem;
+                    left: 1rem;
+                    padding: .5rem 1.5rem;
+                    background-color: $white;
+                }
+            }
+
+            .content {
+                padding: 2rem;
+                text-align: center;
+                border: $border;   
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 50px;
+                h3 {
+                    @include titleText(2rem);
+                }
+                p {
+                    padding: 1rem 0;
+                    @include graphText(1.6rem);
+                }
+                .icons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 2rem;
+                    padding-top: 2rem;
+                    border-top: $border;
+                    span {
+                        @include titleText(1.5rem);
+                        i,svg {
+                            color: $green;
+                            padding-right: .5rem;
+                        }
+                    }
+                }
+                .btn {
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 20px;
+                }
+            }
+        }
+    }
+    .load-more {
+        margin-top: 3rem;
+        text-align: center;
+        .btn {
+            border-radius: 10px;
+        }
+    }
+}
+                    /* End Courses Section */
+                    /* --------Page Courses End-------- */
+
 
                     /* Start Footer */
 .footer {
